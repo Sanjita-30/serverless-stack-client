@@ -1,17 +1,19 @@
 const config = {
+  MAX_ATTACHMENT_SIZE: 5000000,
+
     s3: {
     REGION: "us-east-1",
-    BUCKET: "sanjita-notes",
+    BUCKET: "sanji-bucket",
     },
     apiGateway: {
     REGION: "us-east-1",
-    URL: " https://sjms08fhj8.execute-api.us-east-1.amazonaws.com/prod",
+    URL: "  https://sjms08fhj8.execute-api.us-east-1.amazonaws.com/prod",
     },
     cognito: {
       REGION: "us-east-1",
-      USER_POOL_ID: "us-east-1_QLMKlqVac",
-      APP_CLIENT_ID: "q1gcrpi7dttsbjrqko5npc01i",
-      IDENTITY_POOL_ID: "us-east-1:f7ed87a8-1676-416c-9727-f3d7accd2ab8",
+      USER_POOL_ID: "us-east-1_Pfy9bKmJD",
+      APP_CLIENT_ID: "7v511shas104ukg0lc0nnrieqh",
+      IDENTITY_POOL_ID: "us-east-1:330e0499-cdf4-4400-b032-49f6a7ac5962",
     },
 };
 export default config;
