@@ -11,6 +11,7 @@ import { onError } from "./libs/errorLib";
 import ErrorBoundary from "./components/ErrorBoundary";
 
 
+
 function App() {
   const history = useHistory();
   const [isAuthenticated, userHasAuthenticated] = useState(false);
