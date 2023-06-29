@@ -6,6 +6,7 @@ import { useAppContext } from "../libs/contextLib";
 import { useFormFields } from "../libs/hooksLib";
 import { onError } from "../libs/errorLib";
 import "./Login.css";
+import { Link } from "react-router-dom";
 export default function Login() {
 
   const { userHasAuthenticated } = useAppContext();
@@ -32,6 +33,7 @@ async function handleSubmit(event) {
     setIsLoading(false);
   }
 }
+
 return (
   <div className="Login">
     <Form onSubmit={handleSubmit}>
@@ -52,6 +54,7 @@ return (
          onChange={handleFieldChange}
       />
     </Form.Group>
+    <Link to="/login/reset">Forgot password?</Link>
     <LoaderButton
        block
        size="lg"
@@ -59,6 +62,7 @@ return (
        isLoading={isLoading}
        disabled={!validateForm()}
     >
+    
       Login
     </LoaderButton>
    </Form>

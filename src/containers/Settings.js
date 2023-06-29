@@ -3,6 +3,9 @@ import { API } from "aws-amplify";
 import { useHistory } from "react-router-dom";
 import { onError } from "../libs/errorLib";
 import config from "../config";
+import { LinkContainer } from "react-router-bootstrap";
+import LoaderButton from "../components/LoaderButton";
+
 export default function Settings() {
 const history = useHistory();
 const [isLoading, setIsLoading] = useState(false);
@@ -12,7 +15,23 @@ body: details
 });
 }
 return (
-<div className="Settings">
-</div>
-);
+    <div className="Settings">
+    <LinkContainer to="/settings/email">
+    <LoaderButton block bsSize="large">
+    Change Email
+    </LoaderButton>
+    </LinkContainer>
+    <LinkContainer to="/settings/password">
+    <LoaderButton block bsSize="large">
+    Change Password
+    </LoaderButton>
+    </LinkContainer>
+    <hr />
+    {/* <StripeProvider stripe={stripe}>
+    <Elements>
+    <BillingForm isLoading={isLoading} onSubmit={handleFormSubmit} />
+    </Elements>
+    </StripeProvider> */}
+    </div>
+  );
 }
