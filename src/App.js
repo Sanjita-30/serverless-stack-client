@@ -8,9 +8,6 @@ import { LinkContainer } from "react-router-bootstrap";
 import { AppContext } from "./libs/contextLib";
 import { Auth } from "aws-amplify";
 import { onError } from "./libs/errorLib";
-import ErrorBoundary from "./components/ErrorBoundary";
-
-
 
 function App() {
   const history = useHistory();
@@ -54,7 +51,7 @@ function App() {
       <Navbar.Collapse className="justify-content-end">
         <Nav activeKey={window.location.pathname}>
           {isAuthenticated ? (
-            <>
+           <>
             <LinkContainer to="/settings">
               <Nav.Link>Settings</Nav.Link>
             </LinkContainer>
@@ -73,11 +70,11 @@ function App() {
         </Nav>
       </Navbar.Collapse>
     </Navbar>
-    <ErrorBoundary>
-       <AppContext.Provider value={{ isAuthenticated, userHasAuthenticated }}>
-         <Routes />
-       </AppContext.Provider>
-    </ErrorBoundary>
+    <AppContext.Provider value={{ isAuthenticated, userHasAuthenticated }}>
+      <Routes />
+    </AppContext.Provider>
+
+
   </div>
  )
 );
