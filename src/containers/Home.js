@@ -77,6 +77,7 @@ useEffect(() => {
   return (
     <div className="Home">
       {isAuthenticated ? renderNotes() : renderLander()}
+      
     </div>
   );
 }
