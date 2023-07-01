@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   padding: 0;
   color: #333;
@@ -21,4 +21,41 @@ font-size: 1rem;
 }
 input[type=file] {
 width: 100%;
+} */
+body {
+  margin: 0;
+  padding: 0;
+  color: #181818;
+  font-size: 20px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Open Sans", sans-serif;
+  background-image: url("D:\programming\summer project\notes-app-client\vintage_notebook_pen_photography_retro_sepia_bar_74943_1680x1050-1024x640.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "PT Serif", serif;
+}
+
+select.form-control,
+textarea.form-control,
+input.form-control {
+  font-size: 1rem;
+}
+
+input[type=file] {
+  width: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
